@@ -1,0 +1,101 @@
+
+<div class="container">
+    
+    <h1 class="h2">Coronavirus Outbreak in India - Overview</h1>
+    <br>
+    
+    <div class="card-deck">
+        <div class="card mb-4">
+            <div class="card-header">
+                <div class="card-title">
+                    <h6><b>CONFIRMED</b></h6>
+
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="background: rgb(54,162,235,0.75); width: <%- Math.round((overviewData.active/overviewData.confirmed)*100) %>%" aria-valuenow="<%- overviewData.active %>" aria-valuemin="0" aria-valuemax="<%= overviewData.confirmed %>"></div>
+                        <div class="progress-bar" role="progressbar" style="background: rgba(34,206,206,0.35); width: <%- Math.round((overviewData.recovered/overviewData.confirmed)*100) %>%" aria-valuenow="<%- overviewData.recovered %>" aria-valuemin="0" aria-valuemax="<%= overviewData.confirmed %>"></div>
+                        <div class="progress-bar" role="progressbar" style="background: rgb(66, 66, 66,0.35); width: <%- Math.round((overviewData.deaths/overviewData.confirmed)*100) %>%" aria-valuenow="<%- overviewData.deaths %>" aria-valuemin="0" aria-valuemax="<%= overviewData.confirmed %>"></div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="cases-container" style="color: #06395e;">
+                    <span class="h2"><%= overviewData.confirmed %></span>
+                    <% if(lastUpdateTime < 60) { %>
+                        <span class="h6 text-muted">&emsp;Updated&nbsp;<%= lastUpdateTime %>&nbsp;Minutes&nbsp;Ago</span>
+                    <% } else if (Math.round(lastUpdateTime/60)==1) { %>
+                        <span class="h6 text-muted">&emsp;Updated&nbsp;An&nbsp;Hour&nbsp;Ago</span>
+                    <% } else { %>
+                        <span class="h6 text-muted">&emsp;Updated&nbsp;<%= Math.round(lastUpdateTime/60) %>&nbsp;Hours&nbsp;Ago</span>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <div class="card-title">
+                    <h6><b>ACTIVE</b></h6>
+
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="background: rgb(54,162,235,0.75); width: <%- Math.round((overviewData.active/overviewData.confirmed)*100) %>%" aria-valuenow="<%- overviewData.active %>" aria-valuemin="0" aria-valuemax="<%= overviewData.confirmed %>">
+                            <%= Math.round((overviewData.active/overviewData.confirmed)*100) + '%' %>
+                        </div>
+                    </div>
+    
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="cases-container text-danger">
+                    <span class="h2"><%= overviewData.active %></span><span class="h5">&emsp;&#43;<%= overviewData.deltaconfirmed %>&nbsp;Today</span>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <div class="card-title">
+                    <h6><b>RECOVERED</b></h6>
+
+
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="background: rgba(34,206,206,0.7); width: <%- Math.round((overviewData.recovered/overviewData.confirmed)*100) %>%" aria-valuenow="<%- overviewData.recovered %>" aria-valuemin="0" aria-valuemax="<%= overviewData.confirmed %>"></div>
+                        <span style="margin: 0 auto;"><%= Math.round((overviewData.recovered/overviewData.confirmed)*100) + '%' %></span>
+                    </div>
+    
+
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="cases-container text-success">
+                    <span class="h2"><%= overviewData.recovered %></span><span class="h5">&emsp;&#43;<%= overviewData.deltarecovered %>&nbsp;Today</span>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-header">
+                <div class="card-title">
+                    <h6><b>DEATHS</b></h6>
+
+
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="background: rgb(66, 66, 66,0.35); width: <%- Math.round((overviewData.deaths/overviewData.confirmed)*100) %>%" aria-valuenow="<%- overviewData.deaths %>" aria-valuemin="0" aria-valuemax="<%= overviewData.confirmed %>">
+                        </div>
+                        <span style="margin: 0 auto;"><%= Math.round((overviewData.deaths/overviewData.confirmed)*100) + '%' %></span>
+                    </div>
+    
+
+
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="cases-container text-muted">
+                    <span class="h2"><%= overviewData.deaths %></span><span class="h5">&emsp;&#43;<%= overviewData.deltadeaths %>&nbsp;Today</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

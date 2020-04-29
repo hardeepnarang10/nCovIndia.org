@@ -1,0 +1,31 @@
+
+body {
+    font-family: Poppins;
+}
+
+
+@media (min-width: 768px){
+.container{
+    max-width:95%;
+    }  
+}
+@media (min-width: 992px){
+.container{
+    max-width:95%;
+    }
+}
+
+.card-header {
+    border: none;
+    background: none;
+    padding-bottom: 0;
+}
+.card-body {
+    padding-bottom: 0.8rem;
+}
+
+.table td, .table th {
+}
+tr:hover {
+    background-color: #F5F5F5;
+}

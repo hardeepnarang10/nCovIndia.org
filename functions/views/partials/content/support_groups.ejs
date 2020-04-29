@@ -1,0 +1,37 @@
+
+<div class="card mb-4" onclick="showModalHelp($(this))" data-toggle="modal" data-target="#contentModal" style="cursor: pointer;">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <button class="btn collapsed" style="width: 100%" type="button" data-toggle="collapse" data-target="#SupportGroupBody">
+                    <div class="h5" style="padding: 1.5em 0;">SUPPORT GROUPS</div>
+            </button>
+        </h5>
+    </div>
+    <div id="SupportGroupBody" class="collapse">
+        <div class="card-body" style="display: none;">
+
+            <% supportGroups.forEach((entry,i) => { %>
+
+                <div class="card">
+                    <div class="card-header" style="padding-left: 0;">
+                        <div class="mb-0">
+                            <button class="btn collapsed" style="padding-left: 0; width: 100%;" type="button" data-toggle="collapse" data-target="#<%- 'sup' + entry['State'].slice(0,2) + i %>">
+                                <div class="h6 text-left font-weight-bold"><%- entry['State'] %> (<%- entry['Area'] %>)</div>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="<%- 'sup' + entry['State'].slice(0,2) + i %>" class="collapse">
+                        <div class="card-body">
+                            <ul>
+                                <li><i class="fas fa-link"></i><span><a href="<%- entry['Contact'] %>" target="_blank" style="color: black;"><%- entry['Title'] %></a></span> (<%- entry['Type'] %>)</li>
+                                <li><span><%- entry['Notes'] %></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            <% }); %>
+
+        </div>
+    </div>
+</div>

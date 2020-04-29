@@ -1,0 +1,200 @@
+{
+    "Public Testing Centers" : {
+        "ANDAMAN and NICOBAR ISLANDS": [
+            "Regional Medical Research Centre, Port Blair, Andaman and Nicobar"
+        ],
+        "ANDHRA PRADESH": [
+            "Sri Venkateswara Institute of Medical Sciences, Tirupati",
+            "Andhra Medical College, Visakhapatnam",
+            "GMC, Anantapur",
+            "Sidhartha Medical College, Vijayawada",
+            "Rangaraya Medical College, Kakinada"
+        ],
+        "ASSAM": [
+            "Gauhati Medical College, Guwahati",
+            "Regional Medical Research Center, Dibrugarh",
+            "Silchar Medical College, Silchar",
+            "Jorhat Medical College, Jorhat"
+        ],
+        "BIHAR": [
+            "Rajendra Memorial Research Institute of Medical Sciences, Patna"
+        ],
+        "CHANDIGARH": [
+            "Post Graduate Institute of Medical Education & Research, Chandigarh"
+        ],
+        "CHHATTISGARH": [
+            "All India Institute Medical Sciences, Raipur"
+        ],
+        "DELHI": [
+            "All India Institute Medical Sciences (AIIMS)",
+            "National Centre for Disease Control (NCDC)"
+        ],
+        "GUJARAT": [
+            "BJ Medical College, Ahmedabad",
+            "M.P.Shah Government Medical College, Jamnagar"
+        ],
+        "HARYANA": [
+            "BPS Govt Medical College, Sonipat",
+            "Pt. B.D. Sharma Post Graduate Inst. of Med. Sciences, Rohtak"
+        ],
+        "HIMACHAL PRADESH": [
+            "Indira Gandhi Medical College, Shimla, Himachal Pradesh",
+            "Dr. Rajendra Prasad Govt. Med. College, Kangra, Tanda"
+        ],
+        "JAMMU AND KASHMIR": [
+            "Sher-e- Kashmir Institute of Medical Sciences, Srinagar",
+            "Government Medical College, Jammu",
+            "Government Medical College, Srinagar"
+        ],
+        "JHARKHAND": [
+            "MGM Medical College, Jamshedpur"
+        ],
+        "KARNATAKA": [
+            "Bangalore Medical College & Research Institute, Bangalore",
+            "National Institute of Virology Field Unit Bangalore",
+            "Mysore Medical College & Research Institute, Mysore",
+            "Hassan Inst. of Med. Sciences, Hassan",
+            "Shimoga Inst. of Med. Sciences, Shivamogga"
+        ],
+        "KERALA": [
+            "National Institute of Virology Field Unit",
+            "Govt. Medical College, Thriuvananthapuram",
+            "Govt. Medical College, Kozhikhode",
+            "Govt. Medical College, Thrissur"
+        ],
+        "MADHYA PRADESH": [
+            "All India Institute Medical Sciences, Bhopal",
+            "National Institute of Research in Tribal Health (NIRTH), Jabalpur"
+        ],
+        "MAHARASHTRA": [
+            "Indira Gandhi Government Medical College, Nagpur",
+            "Kasturba Hospital for Infectious Diseases, Mumbai"
+        ],
+        "MEGHALAYA": [
+            "NEIGRI of Health and Medical Sciences, Shillong"
+        ],
+        "MANIPUR": [
+            "J N Inst. of Med. Sciences Hospital, Imphal-East, Manipur",
+            "Regional Institute of Medical Sciences, Imphal"
+        ],
+        "ODISHA": [
+            "Regional Medical Research Center, Bhubaneswar"
+        ],
+        "PUNJAB": [
+            "Government Medical College, Patiala",
+            "Government Medical College, Amritsar"
+        ],
+        "PUDUCHERRY": [
+            "Jawaharlal Institute of Postgraduate Medical Education & Research, Puducherry"
+        ],
+        "RAJASTHAN": [
+            "Sawai Man Singh, Jaipur",
+            "Dr. S.N Medical College, Jodhpur",
+            "Jhalawar Medical College, Jhalawar",
+            "SP Med. College, Bikaner",
+            "RNT Medical College, Udaipur"
+        ],
+        "TAMIL NADU": [
+            "King's Institute of Preventive Medicine & Research, Chennai",
+            "Government Medical College, Theni",
+            "Tirunelveli Medical College, Tirunelveli",
+            "Govt. Medical college, Thiruvaru"
+        ],
+        "TELANGANA": [
+            "Gandhi Medical College, Secunderabad",
+            "Osmania Medical College, Hyderabad"
+        ],
+        "TRIPURA": [
+            "Government Medical College, Agartala"
+        ],
+        "UTTAR PRADESH": [
+            "King's George Medical University, Lucknow",
+            "Institute of Medical Sciences, Banaras Hindu University, Varanasi",
+            "Jawaharlal Nehru Medical College, Aligarh"
+        ],
+        "UTTARAKHAND": [
+            "Government Medical College, Haldwani"
+        ],
+        "WEST BENGAL": [
+            "National Institute of Cholera and Enteric Diseases, Kolkata",
+            "IPGMER, Kolkata"
+        ]
+    },
+    "Private Testing Centers": {
+        "Delhi": [
+          "Lal Path Labs, Block -E, Sector 18, Rohini, Delhi",
+          "Dr Dangs Lab, C-2/1, Safadarjung Development Area, New-Delhi",
+          "Laboratory Services, Indraprastha Apollo Hospitals, Sarita Vihar, New Delhi",
+          "Max Lab, Max Super Spciality Hospital, Saket, New-Delhi",
+          "Sir Ganga Ram Hospital Clinical Lab Services, Sir Ganga Ram Hospital, Delhi",
+          "Oncquest Labs Ltd, 3-Factory Road, New-Delhi",
+          "Prognosis Laboratories, 515-16, Sector 19, Dwarka",
+          "City X-Ray & Scan Clinic Pvt Ltd, 4B/18, Tilak Nagar, New-Delhi"
+        ],
+        "Gujarat": [
+          "Unipath Specialty laboratory limited, 102, Sanoma Plaza, Opposite Parimal Garden, Besides JMC House, Ellisbridge, Ahmedabad",
+          "Supratech Micropath Laboratory & Research Institute Pvt Ltd, Kedar, Ahmedabad",
+          "SN GeneLab Pvt Ltd, President Plaza –A, Near Mahavir Hospital, Nanpura, Surat",
+          "Pangenomics International Pvt Ltd, Ellis Bridge, Ahmedabad"
+        ],
+        "Haryana": [
+          "Strand Life Sciences, A-17, Sector 34, Gurugram",
+          "SRL Limited, GP26, Sector 18, Gurugram",
+          "Modern Diagnostic & Research Centre-Lab, 363-364/4, JAwahar Nagar. Gurgaon",
+          "Core Diagnostics Pvt Ltd, Udyog Vihar Phase-3, Gurgaon",
+          "MolQ Laboratory, Plot 28,29; Sector 18(P), Electronic city, Udyog Vihar, Phase IV, Gurgaon"
+        ],
+        "Karnataka": [
+          "Neuberg Anand Reference Laboratory, Anand Tower, #54, Bowring Hospital Road, Bengaluru",
+          "Cancyte Technologies Pvt Ltd, Sri Shankara Research Centre, Bengaluru"
+        ],
+        "Kerala": [
+          "DDRC SRL Diagnostics Pvt Ltd, Panampilly Nagar, Ernakulam",
+          "MIMS Lab Services, Govindapuram, Kozhikode"
+        ],
+        "Maharashtra": [
+          "Thyrocare Technologies Limited, D37/1, TTC MIDC, Turbhe, Navi Mumbai",
+          "Suburban Diagnostics (India) Pvt. Ltd., 306, 307/T, 3rd Floor, Sunshine Bld., Andheri (W), Mumbai",
+          "Metropolis Healthcare Ltd, Unit No. 409-416, 4th Floor, Commercial Building-1, Kohinoor Mall, Mumbai",
+          "Sir H.N. Reliance Foundation Hospital and Research Centre, Molecular Medicine, Reliance Life Sciences Pvt. Ltd., R-282, TTC Industrial Area, Rabale, Navi Mumbai",
+          "SRL Limited, Prime Square Building, Plot No 1, Gaiwadi Industrial Estate, SV Road, Goregaon, Mumbai",
+          "A.G. Diagnostics Pvt Ltd, Nayantara Building, Pune",
+          "Kokilaben Dhirubhai Ambani Hospital Laboratory, Four Bungalows, Mumbai",
+          "InfeXn Laboratories Private Limited, A/131, Therelek Compound, Road No 23, Wagle Industrial Estate, Thane (W)",
+          "iGenetic Diagnostics Pvt Ltd, Krislon House, Andheri East, Mumbai",
+          "Tata Memorial Centre Diagnostic Services-Tata Memorial Hospital, Parel, Mumbai"
+        ],
+        "Orissa": [
+          "Dept of Lab Services, Apollo Hospitals, Bhubaneswar"
+        ],
+        "Tamil Nadu": [
+          "Dept. of Clinical Virology, CMC, Vellore",
+          "Department of Laboratory Services, Apollo Hospitals Enterprise Ltd, Chennai",
+          "Neuberg Ehrlich Lab Pvt Ltd, 46-48 Masilamani Road, Balaji Nagar, Chennai",
+          "Sri Ramachandra Medical College & Research Institute, Porur, Chennai",
+          "Microbiology Lab, Veerakeralam Road, Coimbatore",
+          "YRG CARE, Taramani, Chennai"
+        ],
+        "Telangana": [
+          "Laboratory Services, Apollo Hospitals, 6th Floor, Health Street Building, Jubilee Hills, Hyderabad",
+          "Vijaya Diagnostic Centre Pvt Ltd, Street No 19, Himayath Nagar, Hyderabad",
+          "Vimta Labs Ltd, Plot No 142, Phase 2, IDA Cherlapally, Hyderabad",
+          "Apollo Health and Lifestyle Limited, Diagnostic Labortory, Bowenpally, Secunderabad",
+          "Dr. Remedies Labs Private Ltd, A3, Titus Plaza, Sharma Commercial Complex, Punjagutta, Hyderabad",
+          "Pathcare Labs Pvt Ltd, Medchal, Hyderabad",
+          "American Institute of Pathology And Lab Sciences Pvt Ltd, Citizens Hospital, Serilingampally, Hyderabad",
+          "Medcis Pathlabs India Pvt Ltd, Plot No 16 & 17, Swathi Plaza, Anand Nagar, New Bowenpally, Secunderabad",
+          "Department of Lab Medicine, Yashoda Hospital, 9th Floor, 1-1-156 & 157, Alexander Road, Secunderabad"
+        ],
+        "U.P.": [
+          "RML Mehrotra Pathology Pvt Ltd, Nirala Nagar, Lucknow"
+        ],
+        "Uttarakhand": [
+          "Dr. Ahuja’s Pathology and Imaging Centre, 7-B, Astley Hall, Dehradun"
+        ],
+        "West Bengal": [
+          "Apollo Gleneagles Hospitals, 58 Canal Circular Road, Kolkata",
+          "Tata Medical Center, Rajarhat, Kolkata"
+        ]
+    }
+}

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('partials/template/head') %>
+
+    <style>
+    
+        .container a {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .container a:hover {
+            color: black;
+        }
+
+    </style>
+
+</head>
+
+<body id="<%= pageID %>">
+    <%- include('partials/template/spinner') %>
+    <%- include('partials/template/navbar') %>
+
+    <%- include('partials/template/ribbon') %>
+
+    <br><br>
+    <!-- Modal -->
+    <div class="modal fade" id="modalPayTM" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="height: 620px; width: 347px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title font-weight-bold" id="modalTitle">
+                        <span class="h5">PayTM QR Code</span>
+                        <span>
+                            <a href="./images/nCovIndiaOrg.png" download="nCovIndiaOrg_PayTM.png" style="color: black; padding: 7.5px; border-radius: 7.5px; background: #BBB; margin: 5px;">(Download)</a>
+                        </span>
+                    </div>
+                    <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close" style="font-size: 2em;">&times;</button>
+                </div>
+                <div class="modal-body" style="overflow: hidden; padding: 0;">
+                    <img src="./images/nCovIndiaOrg.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modalBTC" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="height: 440px; width: 440px;">
+            <div class="modal-content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title font-weight-bold" id="modalTitle">
+                            <span class="h5">Bitcoin QR Code</span>
+                            <span>
+                                <a href="./images/btc_wallet.png" download="nCovIndiaOrg_BTC.png" style="color: black; padding: 7.5px; border-radius: 7.5px; background: #BBB; margin: 5px;">(Download)</a>
+                            </span>
+                        </div>
+                        <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close" style="font-size: 2em;">&times;</button>
+                    </div>
+                    <div class="modal-body" style="overflow: hidden; padding: 0;">
+                        <img src="./images/btc_wallet.png" style="height: 440px; width: 440px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3"></div>
+            <div class="col-xl-6">
+
+                <div class="h3">About Us</div>
+                <p>nCovIndia.org is one among many open efforts to track the COVID-19 outbreak in India - and make that information available to the general public. The numbers are drawn from various sources: government bulletins, press release, verified government twitter handles etc.</p>
+                <p>nCovIndia is currently maintained by Hardeep Singh Narang. I'm an engineering student at Punjab Technical University.</p>
+                <br><br>
+                <div class="h3">Support Us</div>
+                <p>While I promise to keep this information public, I'm currently incurring monthly cost on keeping the server and network live. If you've found information from my site useful, please consider helping me in my mission to keep you informed.</p>
+                <p>You can support the project on <a href="https://paypal.me/HardeepNarang" target="_blank">Paypal</a>, or through <span type="button" class="btn" style="text-decoration: underlined; font-family: Poppins; padding-left: 0; padding-right:0; padding-bottom: 8px;" data-toggle="modal" data-target="#modalPayTM"><span style="text-decoration: underline;">PayTM/UPI</span></span>.</p>
+                <p>Or if you prefer <span type="button" class="btn" style="text-decoration: underlined; font-family: Poppins; padding-left: 0; padding-right:0; padding-bottom: 8px;" data-toggle="modal" data-target="#modalBTC"><span style="text-decoration: underline;">BitCoin</span></span>.</p>
+                <p>Many Thanks :)</p>
+                <br><br>
+                <div class="h3">Sources</div>
+                <p>To be released soon.</p>
+                <br><br>
+                <div class="h3">Contact Me</div>
+                <p>You can find me on <a href="https://www.linkedin.com/in/hardeepnarang10/" target="_blank">LinkedIn Here</a>. Or you can mail me at <a href="mailto:ncovindia.org@gmail.com">ncovindia.org@gmail.com</a>.</p>
+                <br><br>
+
+            </div>
+            <div class="col-xl-3"></div>
+        </div>
+    </div>
+    
+    <br><br>
+
+
+    <%- include('partials/template/footer') %>
+
+    <%- include('partials/template/foot') %>
+
+</body>
+</html>

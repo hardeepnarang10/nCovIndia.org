@@ -1,0 +1,73 @@
+
+<!-- Modal -->
+<div class="modal fade" id="stateModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="border-bottom: none;">
+                <h5 class="modal-title" id="modalTitle"></h5>
+                <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close" style="font-size: 2em;">&times;</button>
+            </div>
+            <div class="modal-body" style="overflow: auto;">
+                
+                <script>
+                    var districtData = <%- JSON.stringify(districtStateData) %>;
+                    var stateDistrictData = {};
+                    function showModal(elementText) {
+
+                        try {
+                            stateDistrictData = districtData[elementText]['districtData'];
+                            $('#modalTitle').text(elementText);
+                            Object.keys(stateDistrictData).forEach((el,i) => {
+                                var tr = document.createElement('tr');
+                                var th = document.createElement('th');
+                                th.innerText = el;
+                                var td = document.createElement('td');
+                                td.innerText = stateDistrictData[el]["confirmed"];
+                                
+                                $(tr).append(th);
+                                $(tr).append(td);
+                                $('#modal-table-body').append(tr);
+
+
+                                $('#districtModalTable').DataTable({
+                                    paging: false,
+                                    info: false,
+                                    "oLanguage": {
+                                        "sSearch": "Statewise&nbsp;Statistics&nbsp;(Click&nbsp;for&nbsp;more&nbsp;info)&nbsp;&emsp;OR&emsp;&nbsp;Search:"
+                                    }
+                                });
+
+
+                            });
+                        } catch (error) {
+                            $('#modalTitle').text('No confirmed cases so far in ' + elementText + '!');
+                            $('.modal-body').attr("style", "display: none;");
+                        }
+
+                        
+                    }
+                </script>
+
+                <script>
+                    $('#stateModal').on('hidden.bs.modal', function (e) {
+                        $('#modal-table-body').html('');
+                        $('.modal-body').attr("style", "display: block;");
+                    })
+                </script>
+        
+                <table class="table table-sm display">
+                    <thead>
+                        <tr id="table-column-names">
+                            <th scope="col" class="col-sm-1">District</th>
+                            <th scope="col" class="col-sm-1">Confirmed&ensp;</th>
+                        </tr>
+                    </thead>
+                    <tbody id="modal-table-body">
+
+                    </tbody>                
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

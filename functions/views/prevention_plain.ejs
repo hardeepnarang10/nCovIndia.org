@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('partials/template/head') %>
+
+    <style>
+    
+        @media (min-width: 768px){
+        .container{
+            max-width:80%;
+            }  
+        }
+        @media (min-width: 992px){
+        .container{
+            max-width:80%;
+            }
+        }
+
+        .row ul {
+            padding-left: 0px;
+            list-style: none;
+        }
+
+        .row li {
+            border-top-style: dashed;
+            border-top-width: 1px;
+            padding: 0.66em 0;
+            border-top-color: rgb(221, 221, 221);
+        }
+        
+        .row li:first-child {
+            border-top-style: none;
+        }
+
+        .row li span {
+            padding-left: 0.66em;
+        }
+    
+    </style>
+        
+
+</head>
+
+<body id="<%= pageID %>">
+    <%- include('partials/template/spinner') %>
+    <%- include('partials/template/navbar') %>
+
+    <br><br><br><br><br>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-2"></div>
+            <div class="col-xl-8">
+                
+                <h2>Coronavirus Prevention:</h2>
+                <p>With more than 169, 287 positive cases and at least 6,500 deaths worldwide, the deadly COVID-19 has already spread to 148 countries. The number of infections continues to rise across several countries with more countries reporting their first case of the highly contagious and deadly infection. As the world is bracing up for the deadly impact of the novel coronavirus, the health experts globally have asked the general public to stick to the basics and practice basic precautionary measures against the spread of COVID-19.</p>
+
+                <p>For starters, it is important to stay aware of the latest information on the COVID-19 outbreak. You can follow the WHO (World Health Organization) website and your national and local public authority for clear and concise information. Some of the actions that will help in preventing the spread of the contagious COVID-19 include:</p>
+
+                <ul>
+                    <li><i class="fas fa-link"></i><span><b>Handwashing:</b></span><span>Washing your hands with soap and water is one of the most effective ways of preventing the novel coronavirus infection. Make it a point to wash your hands before and after preparing food, after coughing, blowing your nose or sneezing, before or after treating a wound or a cut, after touching garbage etc. You can resort to an alcohol-based hand rub or hand sanitizer in the absence of clean water and soap. It is important to remember that using hand sanitizers is not as effective as washing your hands. </span></li>
+                    <li><i class="fas fa-link"></i><span><b>Maintain social distancing:</b></span><span>If someone is coughing, sneezing or visibly sick around you, it is important to maintain a distance of at least 1 metre from that person. This is to ensure that you do not come in contact with their respiratory droplets and get infected.</span></li>
+                    <li><i class="fas fa-link"></i><span><b>Cover your mouth while coughing, sneezing or yawning:</b></span><span>Encourage others to do the same, even if they are not sick. Also, clean and disinfect frequently touched objects and surfaces including your phones, laptops, tablets, tabletops, doorknobs, handles etc. </span></li>
+                </ul>
+
+            </div>
+            <div class="col-xl-8">
+        </div>
+    </div>
+
+    <br><br>
+
+    <%- include('partials/template/foot') %>
+
+</body>
+</html>

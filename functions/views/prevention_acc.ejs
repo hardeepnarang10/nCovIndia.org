@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('partials/template/head') %>
+
+    <style>
+    
+        @media (min-width: 768px){
+        .container{
+            max-width:80%;
+            }  
+        }
+        @media (min-width: 992px){
+        .container{
+            max-width:80%;
+            }
+        }
+
+        .row ul {
+            padding-left: 0px;
+            list-style: none;
+            }
+
+        .row li {
+            border-top-style: dashed;
+            border-top-width: 1px;
+            padding: 0.66em 0;
+            border-top-color: rgb(221, 221, 221);
+            }
+        
+        .row li:first-child {
+            border-top-style: none;
+            }
+
+        .row li span {
+            padding-left: 0.66em;
+            }
+
+        .btn:focus,.btn:active {
+            outline: none !important;
+            box-shadow: none;
+            }
+                
+    </style>
+        
+
+</head>
+
+<body id="<%= pageID %>">
+    <%- include('partials/template/spinner') %>
+    <%- include('partials/template/navbar') %>
+
+    <br><br><br><br><br>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-2"></div>
+            <div class="col-xl-8">
+
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn collapsed"  style="width: 100%" type="button" data-toggle="collapse" data-target="#collapseOne">
+                                    <div class="h5">What is a coronavirus?</div>
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul>
+                                <li><i class="fas fa-link"></i><span>Coronaviruses are a large family of viruses which may cause illness in animals or humans.</span></li>
+                                <li><i class="fas fa-link"></i><span>In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as middle east respiratory syndrome (mers) and severe acute respiratory syndrome (sars).</span></li>
+                                <li><i class="fas fa-link"></i><span>The most recently discovered coronavirus causes coronavirus disease covid-19.</span></li>
+                            </ul>                            
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn collapsed" style="width: 100%" style="width: 100%" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="h5">What is COVID-19?</div>
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul>
+                                <li><i class="fas fa-link"></i><span>COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.</span></li>
+                                <li><i class="fas fa-link"></i><span>"CO" stands for "Corona" (virus has crown-like spikes protruding from its surface), VI stands for "Virus", D for "Disease" and 19 for the year it was discovered.</span></li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn collapsed" style="width: 100%" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="h5">Why is there so much panic?</div>
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul>
+                                <li><i class="fas fa-link"></i><span>The World Health Organisation has declared covid-19 a pandemic, meaning that the efforts to control it have failed. </span></li>
+                                <li><i class="fas fa-link"></i><span>This describes the spread of the virus, not how deadly it may be. The disease is spreading faster than most diseases known to mankind.</span></li>
+                                <li><i class="fas fa-link"></i><span>Without a strong global effort to contain and mitigate the disease, it could lead to unbearable pressure on our healthcare systems, and eventually millions of deaths.</span></li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn collapsed" style="width: 100%" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="h5">How does the coronavirus spread?</div>
+                            </button>
+                        </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul>
+                                <li><i class="fas fa-link"></i><span>A healthy person can get infected from a sick person.</span></li>
+                                <li><i class="fas fa-link"></i><span>After contact with a sick person, when a healthy person touches their eyes, nose or mouth, the infection can transfer to the healthy person.</span></li>
+                                <li><i class="fas fa-link"></i><span>Similarly, when one comes in contact with contaminated surfaces, objects or items of personal use.</span></li>
+                            </ul>                
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                    <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn collapsed" style="width: 100%" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="h5">What is "Social Distancing"?</div>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-link"></i><span>Social distancing simply means reducing contact with other people and maintaining a physical distance between yourself and others. </span></li>
+                            <li><i class="fas fa-link"></i><span>As of now, 1 metre is considered safe. That's about an arm's length. Notably, the infected droplets can travel up to around 1 metre in the air and quickly settle on the surfaces. </span></li>
+                            <li><i class="fas fa-link"></i><span>The measures are aimed at trying to cut down the amount of virus spreading around, and ultimately protect those most vulnerable, including the elderly and people with weakened immune systems. </span></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn collapsed" style="width: 100%" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="h5">Protect yourselves:</div>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-link"></i><span>Wash your hands regularly with plenty of soap and water.</span></li>
+                            <li><i class="fas fa-link"></i><span>Keep an alcohol-based sanitizer ready for times when soap and water are not available.</span></li>
+                            <li><i class="fas fa-link"></i><span>Don't touch your eyes, mouth or nose with unclean hands.</span></li>
+                            <li><i class="fas fa-link"></i><span>Keep your distance of at least 1 meter from anyone coughing or sneezing.</span></li>
+                            <li><i class="fas fa-link"></i><span>Follow no-touch greeting to keep yourself safe. Prefer namaste or hand waving over handshake.</span></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn collapsed" style="width: 100%" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="h5">Protect your loved ones:</div>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-link"></i><span>Don't sneeze or cough into your hands. Use a tissue and throw it away immediately, or sneeze in the inner side of your elbow.</span></li>
+                            <li><i class="fas fa-link"></i><span>Don't travel or visit crowded places if you're sick.</span></li>
+                            <li><i class="fas fa-link"></i><span>Wear a mask if you're sick and also if you are taking care of someone with the symptoms.</span></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn collapsed" style="width: 100%" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="h5">Protect your community:</div>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-link"></i><span>If you feel unwell, seek medical attention.</span></li>
+                            <li><i class="fas fa-link"></i><span>If you have a fever, cough, or difficulty breathing, stay indoors. Call healthcare professionals and follow their advice.</span></li>
+                            <li><i class="fas fa-link"></i><span>Do not share 'just any forwarded message'. Only share authentic information coming through medical experts.</span></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn collapsed" style="width: 100%" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div class="h5">Travel Advisory issued by Govt. of India</div>
+                        </button>
+                    </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-link"></i><span>All the existing visas have been suspended (except diplomatic, official, UN/ international organisations, employment, project visas) until further notice.</span></li>
+                            <li><i class="fas fa-link"></i><span>Visa free travel facility granted to OCI card holders is kept under suspension until further notice. However, OCI card holders already in India can stay in India as long as they want.</span></li>
+                            <li><i class="fas fa-link"></i><span>Visas of all foreign nationals already in India remain valid and they can contact the nearest FRRO/FRO for extension/conversion of their visa.</span></li>
+                            <li><i class="fas fa-link"></i><span>No scheduled international commercial passenger aircraft shall take off from any foreign airport for any airport in India after March 22,2020 till March 29,2020.</span></li>
+                            <li><i class="fas fa-link"></i><span>A max travel time of 20 hours is permissible for such commercial aircraft to land in India.</span></li>
+                            <li><i class="fas fa-link"></i><span>No such incoming scheduled international commercial passenger aircraft shall be allowed to disembark its passengers on Indian soil (foreign or Indian) after March 22,2020.</span></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+            <div class="col-xl-8">
+        </div>
+    </div>
+
+    <br><br>
+
+    <%- include('partials/template/foot') %>
+
+</body>
+</html>

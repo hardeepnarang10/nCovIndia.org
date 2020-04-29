@@ -1,0 +1,47 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand"><span><img src="/images/ncov-logo.png" style="height: 10%; width: 10%;"></span><span>&ensp;nCovIndia.org</span></a>
+        <button class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button" style="position:fixed; right:10px; top:10px;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Overview</a>
+                </li>
+                <li class="nav-item">
+                        <a href="/newsfeed" class="nav-link">Updates</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/cluster" class="nav-link">Cluster</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/resources" class="nav-link">Resources&nbsp;<sup style="background: #C10230; color: white; border-radius: 5px; padding: 3px;">New</sup></a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="/helpline" class="nav-link">Helpline</a>
+                </li> -->
+                <li class="nav-item">
+                    <a href="/FAQs" class="nav-link">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    
+    $(document).ready(function() {
+        $('li.active').removeClass('active');
+        $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
+    });
+
+
+    $(document).ready(() => {
+        $('.ribbon').css({ 'margin-top': $('.navbar').outerHeight() });
+    })
+    
+</script>

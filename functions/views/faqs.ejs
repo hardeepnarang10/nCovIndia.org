@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <%- include('partials/template/head') %>
+
+    <style>
+
+        @media (min-width: 768px){
+        .container{
+            max-width:80%;
+            }  
+        }
+        @media (min-width: 992px){
+        .container{
+            max-width:80%;
+            }
+        }
+
+        .card {
+            border: none;
+            border-top-style: dashed;
+            border-top-width: 1px;
+            padding: 0;
+            border-top-color: rgb(88, 86, 86);
+        }
+
+        .card:first-child {
+            border: none;
+            border-top: none;
+        }
+
+        .row ul {
+            padding: 0;
+            list-style: none;
+            border-top-style: none;
+            border: none;
+        }
+        
+    </style>
+    
+</head>
+            
+
+<body id="<%= pageID %>">
+    <%- include('partials/template/spinner') %>
+    <%- include('partials/template/navbar') %>
+
+    <%- include('partials/template/ribbon') %>
+
+    <br><br>
+    <%- include('partials/content/faqs') %>
+
+    <br><br>
+
+    <%- include('partials/template/footer') %>
+
+
+    <%- include('partials/template/foot') %>
+
+</body>
+</html>
+
+
+
+
+
+
+

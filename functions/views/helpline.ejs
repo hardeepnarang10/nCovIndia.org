@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('partials/template/head') %>
+
+    <style>
+    
+        @media (min-width: 768px){
+        .container{
+            max-width:80%;
+            }  
+        }
+        @media (min-width: 992px){
+        .container{
+            max-width:80%;
+            }
+        }
+
+        .row ul {
+            padding-left: 0px;
+            list-style: none;
+            }
+
+        .row li {
+            border-top-style: dashed;
+            border-top-width: 1px;
+            padding: 0.66em 0;
+            border-top-color: rgb(221, 221, 221);
+            }
+
+        .accordion .card {
+            border: none;
+            border-top-style: dashed;
+            border-top-width: 1px;
+            border-top-color: rgb(221, 221, 221);
+            }
+        
+        .accordion .card:first-child {
+            border-top: none;
+        }
+
+        .mb-4.card {
+            border-style: dashed;
+            border-width: 1px;
+            border-radius: 10px;
+            border-color: slategrey;
+        }
+
+        .row li:first-child {
+            border-top-style: none;
+            }
+
+        .row li span {
+            padding-left: 0.66em;
+            }
+
+        .btn:focus,.btn:active {
+            outline: none !important;
+            box-shadow: none;
+            }
+                
+    </style>
+
+    <script>
+        function searchGoogle(element) {
+            // window.open("https://duckduckgo.com/?q=\\"+element.replace(' ','+'), "_blank");
+            window.open("https://www.google.com/maps/search/"+element.replace(' ','+')+"/@23.4763,82.3395,5z", "_blank");
+        }
+    </script>
+
+</head>
+
+<body id="<%= pageID %>">
+    <%- include('partials/template/spinner') %>
+    <%- include('partials/template/navbar') %>
+
+    <br><br><br><br><br>
+    
+    <div class="container">
+        <div class="row">
+    
+            <div class="col-xl-12">
+                <div class="card-deck" id="accordionExample" style="border: none;">
+
+                    <%- include('partials/content/helpline_modal') %>
+                
+                    <%- include('partials/content/testing_centers') %>
+
+                    <%- include('partials/content/official_resources') %>
+                    <%- include('partials/content/support_groups') %>
+
+                </div>
+            </div>
+    
+        </div>
+    </div>        
+
+    <br><br>
+
+
+    <%- include('partials/template/foot') %>
+
+</body>
+</html>

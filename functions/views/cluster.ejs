@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('partials/template/head') %>
+</head>
+
+<body id="<%= pageID %>">
+    <%- include('partials/template/spinner') %>
+    <%- include('partials/template/navbar') %>
+
+    <div class="mt-10">
+        <h1>.</h1>
+    </div>
+
+    <div class="embed-responsive embed-responsive-16by9" id="clusterFrame" style="height: 43.5em;">
+        <iframe class="embed-responsive-item" id="clusterEmbed" src="https://ncovindia-cluster-cgfvt5vo9.now.sh/"></iframe>
+    </div>
+
+    <%- include('partials/template/foot') %>
+
+</body>
+</html>

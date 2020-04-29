@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('partials/template/head') %>
+    
+    <!-- Custom Script -->
+    <script src="/js/script.js" defer></script>
+
+</head>
+
+<body id="<%= pageID %>" style="font-family: Poppins;">
+    <%- include('partials/template/spinner') %>
+    <%- include('partials/template/navbar') %>
+
+    <%- include('partials/template/ribbon') %>
+
+    <br><br>
+    <%- include('partials/content/overview') %>
+
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+
+                <%- include('partials/template/modal') %>
+
+                <%- include('partials/content/table') %>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+
+                <div class="d-none d-sm-none d-md-block">
+                </div>
+                
+                
+                <%- include('partials/content/map') %>
+                <%- include('partials/content/chart') %>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <%- include('partials/template/footer') %>
+
+
+    <%- include('partials/template/foot') %>
+
+</body>
+</html>

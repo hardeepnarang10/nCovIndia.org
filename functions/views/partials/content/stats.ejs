@@ -1,0 +1,64 @@
+<div class="card-deck">
+    <div class="card mb-3">
+        <div class="card-header">
+            <div class="card-title" align="center">
+                <span class="h5" id="stat-STNM">Nationwide Statistics</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card-deck">
+    <div class="card mb-3 mr-2">
+        <!-- <div class="card-header">
+            <div class="card-title">
+                <h6><b>CONFIRMED</b></h6>
+            </div>
+        </div> -->
+        <div class="card-body">
+            <div class="cases-container">
+                <span>Total:</span>
+                <span class="h4" style="color: #06395e;" id="stat-confirmed"><%= overviewData.confirmed %></span>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 ml-2 mr-2">
+        <!-- <div class="card-header">
+            <div class="card-title">
+                <h6><b>ACTIVE</b></h6>
+            </div>
+        </div> -->
+        <div class="card-body">
+            <div class="cases-container">
+                <span>Active:</span>
+                <span class="h4 text-danger" id="stat-active"><%= overviewData.active %></span>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 ml-2 mr-2">
+        <!-- <div class="card-header">
+            <div class="card-title">
+                <h6><b>RECOVERED</b></h6>
+            </div>
+        </div> -->
+        <div class="card-body">
+            <div class="cases-container">
+                <span>Cured:</span>
+                <span class="h4 text-success" id="stat-recovered"><%= overviewData.recovered %></span>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3 ml-2">
+        <!-- <div class="card-header">
+            <div class="card-title">
+                <h6><b>DEATHS</b></h6>
+            </div>
+        </div> -->
+        <div class="card-body">
+            <div class="cases-container">
+                <span>Deaths:</span>
+                <span class="h4 text-muted" id="stat-deaths"><%= overviewData.deaths %></span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://ncovindia.org/</loc>
+  <lastmod>2020-04-11T12:57:18+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ncovindia.org/newsfeed</loc>
+  <lastmod>2020-04-11T12:57:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ncovindia.org/cluster</loc>
+  <lastmod>2020-04-11T12:57:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ncovindia.org/resources</loc>
+  <lastmod>2020-04-11T12:57:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ncovindia.org/FAQs</loc>
+  <lastmod>2020-04-11T12:57:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ncovindia.org/about</loc>
+  <lastmod>2020-04-11T12:57:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ncovindia.org/database</loc>
+  <lastmod>2020-04-11T12:57:18+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

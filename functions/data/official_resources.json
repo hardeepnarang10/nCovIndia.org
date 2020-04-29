@@ -1,0 +1,146 @@
+[
+    {
+        "State": "India",
+        "Area": "Nationwide",
+        "Title": "Ministry of Health & Family Welfare",
+        "Type": "Resources page",
+        "Link": "https://www.mohfw.gov.in/",
+        "Notes": "No Description Available"
+    },
+    {
+        "State": "India",
+        "Area": "Nationwide",
+        "Title": "Ministry of Health & Family Welfare",
+        "Type": "Twitter",
+        "Link": "https://mobile.twitter.com/MoHFW_INDIA",
+        "Notes": "No Description Available"
+    },
+    {
+        "State": "India",
+        "Area": "Nationwide",
+        "Title": "Government of India Page",
+        "Type": "Resources page",
+        "Link": "https://www.mygov.in/covid-19",
+        "Notes": "No Description Available"
+    },
+    {
+        "State": "India",
+        "Area": "Nationwide",
+        "Title": "Helplines Info",
+        "Type": "Resource Page",
+        "Link": "https://timesofindia.indiatimes.com/photo/74605570.cms",
+        "Notes": "All States & UT Helpline Info"
+    },
+    {
+        "State": "Delhi",
+        "Area": "Statewide",
+        "Title": "State advisory portal",
+        "Type": "Resources page",
+        "Link": "http://health.delhigovt.nic.in/wps/wcm/connect/doit_health/Health/Home/Covid19/",
+        "Notes": "No Description Available"
+    },
+    {
+        "State": "Haryana",
+        "Area": "Statewide",
+        "Title": "National Health Mission",
+        "Type": "Resources page",
+        "Link": "http://www.nhmharyana.gov.in/page.aspx?id=208",
+        "Notes": "No Description Available"
+    },
+    {
+        "State": "Karnataka",
+        "Area": "Statewide",
+        "Title": "Karnataka Vaarthe",
+        "Type": "Twitter",
+        "Link": "https://twitter.com/KarnatakaVarthe",
+        "Notes": "No Description Available"
+    },
+    {
+        "State": "Karnataka",
+        "Area": "Statewide",
+        "Title": "Karnataka Vaarthe",
+        "Type": "Facebook Page",
+        "Link": "https://www.facebook.com/KarnatakaVarthe.Official/",
+        "Notes": "No Description Available"
+    },
+    {
+        "State": "Karnataka",
+        "Area": "Statewide",
+        "Title": "Karnataka Vaarthe",
+        "Type": "Twitter",
+        "Link": "https://twitter.com/KarnatakaVarthe",
+        "Notes": "No Description Available"
+    },
+    {
+        "State": "Karnataka",
+        "Area": "Nationwide",
+        "Title": "COVID-19 FAQ and Resources",
+        "Type": "Resource Document",
+        "Link": "https://docs.google.com/document/d/e/2PACX-1vTuruvMVclkuSQQt6atGiaDwGNn78aKRBGdKz3CBLKMlGloXPYYW1OhaZQPi-sEl49GOZ1xXNOJDbev/pub?urp=gmail_link",
+        "Notes": "Many official datapoints here including official guidelines for quarantine and travel"
+    },
+    {
+        "State": "Kerala",
+        "Area": "Statewide",
+        "Title": "Directorate of Health Services",
+        "Type": "Resources page",
+        "Link": "http://dhs.kerala.gov.in",
+        "Notes": "Daily bulletins and guidlelines on COVID-19"
+    },
+    {
+        "State": "Maharashtra",
+        "Area": "Pune District",
+        "Title": "Govt. of Maharashtra page",
+        "Type": "Resources page",
+        "Link": "https://pune.gov.in/corona-virus-updates/",
+        "Notes": "COVID-19 Updates/Strategies to Overcome"
+    },
+    {
+        "State": "Maharashtra",
+        "Area": "Statewide",
+        "Title": "Public Health Department",
+        "Type": "Resources page",
+        "Link": "https://arogya.maharashtra.gov.in/1175/Novel--Corona-Virus",
+        "Notes": "COVID-19 Updates/Strategies to Overcome"
+    },
+    {
+        "State": "Rajasthan",
+        "Area": "Statewide",
+        "Title": "Health & Family Welfare Department",
+        "Type": "Resources page",
+        "Link": "http://www.rajswasthya.nic.in/Corona%20Virus.htm",
+        "Notes": "No Description Available"
+    },
+    {
+        "State": "Tamil Nadu",
+        "Area": "Statewide",
+        "Title": "Govt. of TN",
+        "Type": "Resources page",
+        "Link": "https://www.tn.gov.in/go_view/dept/11",
+        "Notes": "COVID-19 Updates/Strategies to Overcome"
+    },
+    {
+        "State": "Tamil Nadu",
+        "Area": "Statewide",
+        "Title": "Stop Corona TN - Govt. run",
+        "Type": "Resources page",
+        "Link": "https://stopcoronatn.in/",
+        "Notes": "Comprehensive website about TN coronavirus response"
+    },
+    {
+        "State": "Telangana",
+        "Area": "Statewide",
+        "Title": "Commissionerate of health and family welfare",
+        "Type": "Resources page",
+        "Link": "https://chfw.telangana.gov.in/homeCorona.do",
+        "Notes": "No Description Available"
+    },
+    {
+        "State": "Uttar Pradesh",
+        "Area": "Statewide",
+        "Title": "State portal for COVID-19",
+        "Type": "Resources page",
+        "Link": "http://dgmhup-covid19.in/",
+        "Notes": "No Description Available"
+    }
+]

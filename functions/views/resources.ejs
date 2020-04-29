@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('partials/template/head') %>
+</head>
+
+<body id="<%= pageID %>">
+    <%- include('partials/template/spinner') %>
+    <%- include('partials/template/navbar') %>
+
+    <div class="mt-10">
+        <h1>.</h1>
+    </div>
+
+    <div class="embed-responsive embed-responsive-1by1 d-block d-sm-none" id="resourceFrame" style="position: fixed; top: 1em; bottom: -3em;">
+            <iframe class="embed-responsive-item" id="resourceEmbed" src="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vShWjNeNn8n0hen_5KIWQhq_RLCq4Obn23SUzRSAT5fKCQgOZuZnWe57g79elkwum2zavntG_GSawDM/pubhtml?gid=1775152218&single=true"></iframe>
+    </div>
+    <div class="embed-responsive embed-responsive-1by1 d-none d-sm-block" id="resourceFrame" style="position: fixed; top: 2.2em; bottom: -2.25em;">
+        <iframe class="embed-responsive-item" id="resourceEmbed" src="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vShWjNeNn8n0hen_5KIWQhq_RLCq4Obn23SUzRSAT5fKCQgOZuZnWe57g79elkwum2zavntG_GSawDM/pubhtml?gid=1775152218&single=true"></iframe>
+    </div>
+    
+    <%- include('partials/template/foot') %>
+
+</body>
+</html>

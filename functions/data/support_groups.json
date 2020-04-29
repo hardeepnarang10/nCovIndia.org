@@ -1,0 +1,66 @@
+[
+    {
+        "State": "India",
+        "Area": "Nationwide",
+        "Title": "MyGoV corona helpdesk",
+        "Type": "Whatsapp",
+        "Contact": "tel:+91-90-131-515-15",
+        "Notes": "Chatbot from ministry of health answering COVID-19 questions"
+    },
+    {
+        "State": "Worldwide",
+        "Area": "Worlwide",
+        "Title": "WHO health alert chatbot",
+        "Type": "Whatsapp",
+        "Contact": "https://api.whatsapp.com/send?phone=41225017655&text=hi&source=&data=",
+        "Notes": "Free to use WHO chatbot which has been designed to answer questions from the public about Coronavirus. Text 'hi' to start."
+    },
+    {
+        "State": "Karnataka",
+        "Area": "Statewide",
+        "Title": "CoViD-19 Karnataka: Sahaya Group",
+        "Type": "Telegram Group",
+        "Contact": "https://t.me/karnataka_Covid19",
+        "Notes": "A platform to dicuss about CoViD19 in Karnataka. Run by the Dept of Info and Public Relations - Govt of Karnataka."
+    },
+    {
+        "State": "Karnataka",
+        "Area": "Statewide",
+        "Title": "CoViD-19 Karnataka State Channel",
+        "Type": "Telegram Group",
+        "Contact": "https://t.me/Karnataka_KoViD19_Broadcast",
+        "Notes": "Information channel of DIPR - Govt. of Karnataka for accurate info."
+    },
+    {
+        "State": "Karnataka",
+        "Area": "Statewide",
+        "Title": "CoViD-19 Kar Bot",
+        "Type": "Telegram Group",
+        "Contact": "https://t.me/covid19kar_bot",
+        "Notes": "A bot which provides common information about COVID-19"
+    },
+    {
+        "State": "Kerala",
+        "Area": "Statewide",
+        "Title": "GoK Direct",
+        "Type": "Android app",
+        "Contact": "https://play.google.com/store/apps/details?id=com.qkopy.prdkerala&hl=en_IN",
+        "Notes": "Gives updates on of COVID-19 infection in state"
+    },
+    {
+        "State": "Kerala",
+        "Area": "Statewide",
+        "Title": "COVID-19 Kerala Official",
+        "Type": "Telegram Group",
+        "Contact": "https://t.me/COVID19_Kerala",
+        "Notes": "Govt. of Kerala initiative for verified info"
+    },
+    {
+        "State": "Tamil Nadu",
+        "Area": "Statewide",
+        "Title": "Together against corona - TN Govt.",
+        "Type": "Telegram Group",
+        "Contact": "https://t.me/TN_Together_AgainstCorona",
+        "Notes": "Official information channel - TN Govt."
+    }
+]

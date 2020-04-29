@@ -1,0 +1,98 @@
+
+<div class="card">
+    <div class="card-header" style="padding-bottom: 0.3em;">
+        <span>Outbreak Statistics</span>
+        <button class="btn btn-light close" id="statType" onclick="changeStatButton($(this))" style="font-size: 1em; padding: 5px;">View Daily Cases</button>
+    </div>
+    <div class="card-body">
+        <canvas id="barChart"></canvas>
+    </div>
+    <!-- <div class="card-footer" style="background: transparent;">
+    </div> -->
+</div>
+
+<script>
+
+    var allDataArr = <%- JSON.stringify(dailyData) %>;
+
+    var cumulativeDataDict = {};
+    cumulativeDataDict['date'] = [];
+    cumulativeDataDict['confirmed'] = [];
+    cumulativeDataDict['recovered'] = [];
+    cumulativeDataDict['deceased'] = [];
+
+    allDataArr.forEach(element => {
+        cumulativeDataDict['date'].push(element['date']);
+        cumulativeDataDict['confirmed'].push(element['totalconfirmed']);
+        cumulativeDataDict['recovered'].push(element['totalrecovered']);
+        cumulativeDataDict['deceased'].push(element['totaldeceased']);
+    });
+
+    var dailyDataDict = {};
+    dailyDataDict['confirmed'] = [];
+    dailyDataDict['recovered'] = [];
+    dailyDataDict['deceased'] = [];
+
+    allDataArr.forEach(element => {
+        dailyDataDict['confirmed'].push(element['dailyconfirmed']);
+        dailyDataDict['recovered'].push(element['dailyrecovered']);
+        dailyDataDict['deceased'].push(element['dailydeceased']);
+    });
+
+
+    var ctx = document.getElementById('barChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'bar',
+
+        // The data for our dataset
+        data: {
+            labels: cumulativeDataDict['date'],
+            
+            datasets: [{
+                label: 'Confirmed',
+                backgroundColor: 'rgb(54,162,235,0.75)',
+                data: cumulativeDataDict['confirmed']
+                }, {
+                label: 'Deceased',
+                backgroundColor: 'rgb(66, 66, 66,0.35)',
+                data: cumulativeDataDict['deceased']
+                }, {
+                label: 'Recovered',
+                backgroundColor: 'rgba(34,206,206,0.7)',
+                data: cumulativeDataDict['recovered']
+                }
+            ]
+            
+        },
+
+        // Configuration options go here
+        options: {
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    });
+
+    var cumulative = true;
+
+    function changeStatButton(element) {
+        if($(element).text().includes('Daily')) {
+            $(element[0]).text('View Total Cases');
+        } else {
+            $(element[0]).text('View Daily Cases');
+        }
+
+        cumulative = !cumulative;
+        chart.data.datasets[0].data = cumulative ? cumulativeDataDict['confirmed'] : dailyDataDict['confirmed'];
+        chart.data.datasets[1].data = cumulative ? cumulativeDataDict['deceased'] : dailyDataDict['deceased'];
+        chart.data.datasets[2].data = cumulative ? cumulativeDataDict['recovered'] : dailyDataDict['recovered'];
+        chart.update();
+    }
+
+</script>

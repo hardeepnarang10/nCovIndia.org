@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-xl-1"></div>
+
+        <div class="col-lg-10">
+
+            <div class="h3 font-weight-bold">CORONAVIRUS FAQs</div>
+
+            <div class="accordion" id="accordionExample">
+                <% FAQSArr.forEach((faq, i) => { %>
+
+                    <div class="card">
+                        <div class="card-header" onclick="$($(this)[0].children[0].children[0].children[0].children[1]).toggle(() => { this.html() })" style="padding-left: 0;">
+                        <h5 class="mb-0">
+                            <div class="btn collapsed"  style="width: 100%; text-align: left; padding-left: 0;" type="button" data-toggle="collapse" data-target="#<%- faq['question'].slice(0,2) + i %>">
+                                <div><span class="h6 font-weight-bold"><%- faq['question'] %></span><span style="float: right; border-style: dashed; border-radius: 100%; padding: 1.5px 8px; border-width: 1px;">&#43;</span></div>
+                            </div>
+                        </h5>
+                        </div>
+                        <div id="<%- faq['question'].slice(0,2) + i %>" class="collapse">
+                        <div class="card-body" style="padding-left: 0;">
+                            <ul>
+                                <li><span><%- faq['answer'] %></span></li>
+                            </ul>                            
+                        </div>
+                        </div>
+                    </div>
+
+                <% }) %>                
+            </div>
+
+        </div>
+
+        <div class="col-xl-1"></div>
+
+    </div>
+</div>

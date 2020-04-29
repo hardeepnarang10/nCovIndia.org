@@ -1,0 +1,93 @@
+<script>
+
+    $(document).ready(function() {
+        $('#stateTable').DataTable({
+            paging: false,
+            info: false,
+            "language": {
+                "search": "Statewise&nbsp;Statistics&nbsp;(Click&nbsp;for&nbsp;more&nbsp;info)&nbsp;&emsp;OR&emsp;&nbsp;Search:"
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('#stateTable_filter').css({
+            'float': 'none',
+            'text-align': 'left'
+        });
+        
+    });
+
+</script>
+
+<style>
+
+    input {
+        display: inline-block;
+        border: 1px;
+        border-style: solid;
+        box-shadow: none;
+        border-radius: 2px;
+        border-color: grey;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    table.dataTable.no-footer {
+        border-bottom: none;
+    }
+
+    table.dataTable tbody th, table.dataTable tbody td {
+        padding: 5px;
+    }
+
+    table.dataTable tbody tr:hover {
+        background-color: #F5F5F5;
+    }
+
+</style>
+
+<div class="card mb-4" style="overflow: auto;">
+    <!-- <div class="card-header" style="padding-bottom: 0.40em;">Statewise Statistics (Click for More Information)</div> -->
+    <div class="card-body">
+        <table id="stateTable" class="table table-sm borderless">
+                <thead>
+                    <tr>
+                        <th scope="col" class="col-sm-1 text-muted">State / UT</th>
+                        <th scope="col" class="col-sm-1 text-center" style="color: #06395e; font-size: 0.75em;">Confirmed&ensp;</th>
+                        <th scope="col" class="col-sm-1 text-center" style="color: #C10230; font-size: 0.75em;">Active&emsp;&emsp;&emsp;&emsp;</th>
+                        <th scope="col" class="col-sm-1 text-center text-success" style="font-size: 0.75em;">Recovered&ensp;</th>
+                        <th scope="col" class="col-sm-1 text-center text-muted" style="font-size: 0.75em;">Deaths&emsp;&ensp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <% for (key in allStatesData) { %>
+
+                        <tr onclick="showModal($(this).children()[0].innerText)" class="text-muted" data-toggle="modal" data-target="#stateModal" style="cursor: pointer;">
+                            <th scope="row"><%= allStatesData[key].state %></th>
+                            <td class="text-center" style="color: #06395e;">
+                                <span>&ensp;<%= allStatesData[key].confirmed %></span>
+                            </td>
+                            <td class="" style="color: #C10230;">
+                                <span style="padding-left: 1.15em;"><%= allStatesData[key].active %></span>
+                                <% if(parseInt(allStatesData[key].deltaconfirmed)) { %>
+                                    <span style="float: right;">&ensp;&#43;<%= allStatesData[key].deltaconfirmed %></span>
+                                <% } %>
+                            </td>
+                            <td class="text-success text-center">
+                                <span><%= allStatesData[key].recovered %></span>
+                            </td>
+                            <td class="text-muted text-center">
+                                <span><%= allStatesData[key].deaths %></span>
+                            </td>
+                        </tr>
+
+                    <% } %>
+
+                </tbody>
+        </table>       
+    </div>
+</div>

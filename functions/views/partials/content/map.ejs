@@ -1,0 +1,286 @@
+<style>
+
+    #map {
+        height: 100%;
+        background: white;
+    }
+
+</style>
+
+
+<div id="mapCard" class="card mb-4" style="height: 860px; padding-bottom: 0.66em;">
+    <div class="card-header" style="height: 1%;">State Map - India (Click for More Information)</div>
+    <div id="mapCardBody" class="card-body" style="height: 100%;">
+        <div id="map"></div>
+    </div>
+</div>
+
+<button class="btn btn-primary btn-lg" id="btnTrigger" data-toggle="modal" data-target="#stateModal" style="display: none;"></button>
+
+<script>
+
+    var allStateData = <%- JSON.stringify(allStateDataDict) %>;
+
+    var geoData = <%- statesData %>;
+
+    var map = L.map('map', {
+        attributionControl: false,
+        zoomControl: false
+    }).setView([23.4763,81.9395], 4);
+
+    var geojson;
+
+    function getColor(d) {
+        return d > 2000 ? '#c93c47' :
+            d > 1500  ? '#c93c47' :
+            d > 1000  ? '#d66d75' :
+            d > 500   ? '#e49da3' :
+            d > 0   ? '#f1ced1' :
+            'silver';
+    }
+
+
+    function style(feature) {
+
+        return {
+            fillColor: getColor(allStateData[feature.properties.ST_NM].active),
+            weight: 1,
+            opacity: 1,
+            color: 'white',
+            fillOpacity: 0.7
+        };
+    }
+
+    function highlightFeature(e) {
+        var layer = e.target;
+
+        layer.setStyle({
+            fillColor: 'grey',
+            weight: 2,
+            fillOpacity: 0.7
+        });
+
+        info.update(layer.feature.properties);
+
+        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+            layer.bringToFront();
+        }
+    }
+
+    function showModalMap(e) {
+        $('#btnTrigger').click();
+        showModal(e.target.feature.properties.ST_NM);
+    }
+
+    function resetHighlight(e) {
+        geojson.resetStyle(e.target);
+        info.update();
+    }
+
+    function zoomToFeature(e) {
+        map.fitBounds(e.target.getBounds());
+    }
+
+    function onEachFeature(feature, layer) {
+        layer.on({
+            mouseover: highlightFeature,
+            click: showModalMap,
+            mouseout: resetHighlight
+        });
+    }
+
+    geojson = L.geoJson(geoData, {
+        style: style,
+        onEachFeature: onEachFeature,
+        zoomControl: false
+    }).addTo(map);
+
+
+    var overviewData = <%- JSON.stringify(overviewData) %>;
+
+    var info = L.control();
+
+    // method that we will use to update the control based on feature properties passed
+    info.update = function (props) {
+        props ? $('#stat-STNM').html(props.ST_NM) + $('#stat-confirmed').html('T:&nbsp'+allStateData[props.ST_NM].confirmed) + $('#stat-active').html('A:&nbsp'+allStateData[props.ST_NM].active) + $('#stat-recovered').html('R:&nbsp'+allStateData[props.ST_NM].recovered) + $('#stat-deaths').html('D:&nbsp'+allStateData[props.ST_NM].deaths) :
+        $('#stat-STNM').html("Nationwide Statistics") + $('#stat-confirmed').html('T:&nbsp'+overviewData.confirmed) + $('#stat-active').html('A:&nbsp'+overviewData.active) + $('#stat-recovered').html('R:&nbsp'+overviewData.recovered) + $('#stat-deaths').html('D:&nbsp'+overviewData.deaths);
+
+    }
+
+
+    var legend = L.control({position: 'topright'});
+
+    legend.onAdd = function (map) {
+
+        var divLegend = L.DomUtil.create('div', 'info legend'),
+            grades = ['00', 500, 1000, 1500, 2000],
+            labels = [];
+
+        // loop through our density intervals and generate a label with a colored square for each interval
+        for (var i = 0; i < grades.length; i++) {
+            divLegend.innerHTML +=
+                '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+                grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+        }
+
+
+        var divStats = L.DomUtil.create('div', 'stateInfo');
+
+        divStats.innerHTML = `
+        
+        
+        <div class="card-deck-container">
+            <div class="card-deck">
+                <div class="card mb-2" style="border: none;">
+                    <div class="card-header" id="stat-header">
+                        <div class="card-title" align="center">
+                            <span class="h6" id="stat-STNM" style="text-decoration: underlined;">Nationwide&nbsp;Statistics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-deck mb-2 stats-card-deck-body">
+                <div class="card mr-0">
+                    <div class="card-header">
+                        <div class="cases-container">
+                            <span style="color: #06395e;" id="stat-confirmed" class="h5">T:&nbsp;<%= overviewData.confirmed %></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card ml-0">
+                    <div class="card-header">
+                        <div class="cases-container">
+                            <span class="h5 text-danger" id="stat-active">A:&nbsp;<%= overviewData.active %></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-deck stats-card-deck-body">
+                <div class="card mr-0">
+                    <div class="card-header">
+                        <div class="cases-container">
+                            <span class="h5 text-success" id="stat-recovered">R:&nbsp;<%= overviewData.recovered %></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card ml-0">
+                    <div class="card-header">
+                        <div class="cases-container">
+                            <span class="h5 text-muted" id="stat-deaths">D:&nbsp;<%= overviewData.deaths %></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        `;
+
+        var divContainer = L.DomUtil.create('div', 'card-deck');
+
+        divContainer.innerHTML = divStats.outerHTML + divLegend.outerHTML;
+
+        return divContainer;
+
+    };
+
+    legend.addTo(map);
+
+
+    map.dragging.disable();
+    map.touchZoom.disable();
+    map.doubleClickZoom.disable();
+    map.scrollWheelZoom.disable();
+    map.boxZoom.disable();
+    map.keyboard.disable();
+
+    
+</script>
+
+
+<style>
+    
+
+    .info {
+        display: inline-block;
+        width: 130px;
+        font: 14px/16px Poppins;
+        padding: 6px 8px;
+        font-family: Poppins;
+        background: white;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 0 1px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+    
+    .legend {
+        line-height: 30px;
+        color: #555;
+        display: inline-block;
+    }
+    .legend i {
+        display: inline-block;
+        width: 30px;
+        height: 18px;
+        margin-right: 8px;
+        opacity: 0.7;
+    }
+
+    .leaflet-top,.leaflet-left {
+        margin-top: 2em;
+    }
+
+    .leaflet-bar {
+        box-shadow: 0 1px 1px;
+        border-radius: 5px;
+    }
+
+    .stateInfo {
+        display: inline-block;
+        box-shadow: 0 0 1px rgba(0,0,0,0.2);
+        border-radius: 5px;
+        margin-right: 1em;
+    }
+
+    .stateInfo .card-deck {
+        font-size: 1.25em;
+    }
+
+    .card-deck-container {
+        width: 17em;
+    }
+
+    .stats-card-deck-body .card {
+        border: none;
+    }
+
+    .stats-card-deck-body .card-header {
+        /* padding-bottom: 12px; */
+        padding: 10px;
+        padding-right: 5px;
+    }
+
+
+    .info.legend.leaflet-control {
+        margin-right: 10.5rem;
+        margin-right: 30em;
+    }
+
+
+    #mapCardBody {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    div.card.ml-0 {
+        padding-left: 0;
+    }
+    div.card.mr-0 {
+        padding-right: 0;
+    }
+    
+</style>
+
+    

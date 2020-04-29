@@ -1,0 +1,39 @@
+
+
+<% Object.entries(testingCenters).forEach(([category, sectors]) => { %>
+    <div class="card mb-4" onclick="showModalHelp($(this))" data-toggle="modal" data-target="#contentModal" style="cursor: pointer;">
+        <div class="card-header">
+            <div class="mb-0">
+                <button class="btn collapsed" style="width: 100%" type="button" data-toggle="collapse" data-target="#<%- category.substring(0, 6); %>">
+                        <div class="h5" style="padding: 1.5em 0;"><%= category.toUpperCase() %></div>
+                </button>
+            </div>
+        </div>
+        <div id="<%- category.substring(0, 6); %>" class="collapse" style="display: none;">
+            <div class="card-body" style="border: none;">
+
+                <% Object.entries(sectors).forEach(([state, centers],i) => { %>
+                    <div class="card">
+                        <div class="card-header" style="padding-left: 0;">
+                            <div class="mb-0">
+                                <button class="btn collapsed"  style="padding-left: 0; width: 100%;" type="button" data-toggle="collapse" data-target="#<%- category.substring(0, 1) + state.substring(0, 1) + i %>">
+                                    <div class="h6 text-left font-weight-bold"><%- state.toUpperCase() %></div>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="<%- category.substring(0, 1) + state.substring(0, 1) + i %>" class="collapse">
+                            <div class="card-body">
+                                <ul>
+                                    <% centers.forEach((center) => { %>
+                                        <li><i class="fas fa-link"></i><span onclick="searchGoogle($(this).text())" style="cursor: pointer;"><%- center %></span></li>
+                                    <% }); %>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+                                    
+            </div>
+        </div>
+    </div>
+<% }); %>

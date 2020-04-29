@@ -1,0 +1,104 @@
+
+<script>
+            
+    var showModalCard = function (element) {
+        var htmlTree = element[0].children;
+        var textTree = htmlTree[1].children;
+
+        $('#modalTitle').text(textTree[0].innerText);
+        $('#modalThumb').attr("src", htmlTree[0]['src']);
+        $('#modalDescription').html(textTree[1].innerText);
+    }
+
+</script>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-xl" id="stateModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-weight-bold" id="modalTitle"></h5>
+                <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close" style="font-size: 2em;">&times;</button>
+            </div>
+            <div class="modal-body" style="overflow: auto;">
+                <div class="paragraphs">
+                    <div class="row">
+                        <div class="span4">
+                        <img class="img-responsive" id="modalThumb" style="float:left; max-width: 100%; padding: 1.5em;">
+                        <p class="m-4" id="modalDescription"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <h2>News Updates:</h2>
+        <br><br><br>
+        <% for(var i = 5; i < rssData.length - 6; i=i+6 ) { %>
+            <div class="card-deck" style="margin: 0%">
+                <div class="card mb-4" onclick="showModalCard($(this))" class="text-muted" data-toggle="modal" data-target="#stateModal" style="cursor: pointer;">
+                    <img class="card-img-top" src="<%= rssData[i-5].fullimage %>" style="height: 280px;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= rssData[i-5].title %></h5>
+                        <p style="display: none;"><%= rssData[i-5].description %></p>
+                        <p class="card-text"><small class="text-muted"><%= rssData[i-5].updatedDate %></small></p>
+                    </div>
+                </div>
+                <div class="w-100 d-block d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+                <div class="card mb-4" onclick="showModalCard($(this))" class="text-muted" data-toggle="modal" data-target="#stateModal" style="cursor: pointer;">
+                    <img class="card-img-top" src="<%= rssData[i-4].fullimage %>" style="height: 280px;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= rssData[i-4].title %></h5>
+                        <p style="display: none;"><%= rssData[i-4].description %></p>
+                        <p class="card-text"><small class="text-muted"><%= rssData[i-4].updatedDate %></small></p>
+                    </div>
+                </div>
+                <div class="w-100 d-block d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+                <div class="w-100 d-none d-md-block d-lg-none"><!-- wrap every 2 on sm--></div>
+                <div class="card mb-4" onclick="showModalCard($(this))" class="text-muted" data-toggle="modal" data-target="#stateModal" style="cursor: pointer;">
+                    <img class="card-img-top" src="<%= rssData[i-3].fullimage %>" style="height: 280px;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= rssData[i-3].title %></h5>
+                        <p style="display: none;"><%= rssData[i-3].description %></p>
+                        <p class="card-text"><small class="text-muted"><%= rssData[i-3].updatedDate %></small></p>
+                    </div>
+                </div>
+                <div class="w-100 d-block d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+                <div class="w-100 d-none d-sm-none d-md-none d-lg-block d-xl-block"><!-- wrap every 3 on lg and xl--></div>
+                <div class="card mb-4" onclick="showModalCard($(this))" class="text-muted" data-toggle="modal" data-target="#stateModal" style="cursor: pointer;">
+                    <img class="card-img-top" src="<%= rssData[i-2].fullimage %>" style="height: 280px;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= rssData[i-2].title %></h5>
+                        <p style="display: none;"><%= rssData[i-2].description %></p>
+                        <p class="card-text"><small class="text-muted"><%= rssData[i-2].updatedDate %></small></p>
+                    </div>
+                </div>
+                <div class="w-100 d-block d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+                <div class="w-100 d-none d-md-block d-lg-none"><!-- wrap every 2 on sm--></div>
+                <div class="card mb-4" onclick="showModalCard($(this))" class="text-muted" data-toggle="modal" data-target="#stateModal" style="cursor: pointer;">
+                    <img class="card-img-top" src="<%= rssData[i-1].fullimage %>" style="height: 280px;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= rssData[i-1].title %></h5>
+                        <p style="display: none;"><%= rssData[i-1].description %></p>
+                        <p class="card-text"><small class="text-muted"><%= rssData[i-1].updatedDate %></small></p>
+                    </div>
+                </div>
+                <div class="w-100 d-block d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+                <div class="card mb-4" onclick="showModalCard($(this))" class="text-muted" data-toggle="modal" data-target="#stateModal" style="cursor: pointer;">
+                    <img class="card-img-top" src="<%= rssData[i].fullimage %>" style="height: 280px;">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= rssData[i].title %></h5>
+                        <p style="display: none;"><%= rssData[i].description %></p>
+                        <p class="card-text"><small class="text-muted"><%= rssData[i].updatedDate %></small></p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        <% } %>        
+    </div>
+</div>
